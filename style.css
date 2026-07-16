@@ -294,13 +294,102 @@ main {
     -o-border-radius: 8px;
 }
 
-.kamar .kamar-main a {
-    font-family: 'Poppins', sans-serif;
-    color: var(--accent-color);
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
+.kamar-main-button {
+    position: relative;
     width: 100%;
     border: 2px solid var(--accent-color);
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.kamar-main-button a {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.kamar-main-button:hover {
+    background-color: var(--accent-color);
+}
+
+.kamar-main-button:hover a {
+    color: var(--secondary-color);
+
+}
+
+/* Footer Section */
+.footer {
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+}
+
+.footer-container {
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-header img {
+    width: 75px;
+    height: 70px;
+}
+
+.footer-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-header-text h1 {
+    text-transform: uppercase;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.footer-header-text h2 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.footer-contact, .footer-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 20px;
 }
