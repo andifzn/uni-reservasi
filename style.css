@@ -1,0 +1,306 @@
+:root {
+    --primary-color: #2e0500;
+    --accent-color: #bf914e;
+    --secondary-color: #f9f6f2;
+    --text-color: #222222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 25px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: 35px;
+}
+
+.navbar-menu {
+    position: absolute;
+    font-family: "Playfair Display", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 35px 0;
+    background-color: var(--primary-color);
+    height: 100dvh;
+    top: 50px;
+    width: 200px;
+    right: 0;
+    transform: translateX(110%);
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-menu a {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.navbar-menu.pop-up {
+    transform: translateX(10%);
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburger-menu img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    margin-top: 0px;
+}
+/* Hero Section */
+
+.hero {
+    padding: 0 30px;
+    position: relative;
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("figma/img/hero-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-header {
+    font-family: "Playfair Display", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-header h1 {
+    font-family: "Poppins";
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hero-header h2 {
+    color: var(--secondary-color);
+    font-size: 36px;
+    letter-spacing: 1.9px;
+}
+
+.hero-header h3 {
+    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hero-text {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-text p {
+    color: var(--secondary-color);
+    letter-spacing: 1.1px;
+}
+
+.hero-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    width: max-content;
+    gap: 10px;
+    padding: 12px 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.hero-button a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Kamar Section */
+.kamar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 45px 30px;
+}
+
+.kamar-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.kamar-header {
+    position: relative;
+    width: 100%;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.kamar-header h1 {
+    font-family: "Playfair Display", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.kamar-header::before {
+    content: "";
+    position: absolute;
+    background-color: var(--accent-color);
+    width: 80px;
+    height: 2px;
+    top: 54px;
+}
+
+.kamar-header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.kamar-produk-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+}
+
+.kamar-produk {
+    padding: 10px 20px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.kamar-produk.swiper-slide {
+    height: auto;
+}
+
+.kamar-produk-img img {
+    border-radius: 8px;
+    width: 100%;
+    height: 138px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.kamar-produk-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kamar-produk-detail h2 {
+    font-family: "Playfair Display", sans-serif;
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.kamar-produk-detail-icon {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    font-weight: 500;
+}
+
+.kamar-produk-detail h3 {
+    color: var(--accent-color);
+    width: 70%;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+
+.kamar-produk-container .kamar-produk-detail a {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    width: max-content;
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.kamar .kamar-main a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    border: 2px solid var(--accent-color);
+}
