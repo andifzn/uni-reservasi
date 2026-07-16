@@ -74,11 +74,6 @@ header {
     transition: all 0.5s ease-in-out;
 }
 
-.hamburger-menu img {
-    width: 24px;
-    height: 24px;
-}
-
 main {
     margin-top: 0px;
 }
@@ -393,3 +388,4 @@ main {
     display: flex;
     gap: 20px;
 }
+

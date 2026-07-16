@@ -1,0 +1,322 @@
+:root {
+    --primary-color: #2e0500;
+    --accent-color: #bf914e;
+    --secondary-color: #f9f6f2;
+    --text-color: #222222;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 25px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-logo img {
+    width: 50px;
+    height: 35px;
+}
+
+.navbar-menu {
+    position: absolute;
+    font-family: "Playfair Display", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 35px 0;
+    background-color: var(--primary-color);
+    height: 100dvh;
+    top: 50px;
+    width: 200px;
+    right: 0;
+    transform: translateX(110%);
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-menu a {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.navbar-menu.pop-up {
+    transform: translateX(10%);
+    transition: all 0.5s ease-in-out;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.kamar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 25px 30px 75px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.kamar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.kamar-header h1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.lokasi-halaman {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.lokasi-halaman a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+#lokasi-halaman {
+    color: var(--text-color);
+}
+
+.menu-tipe-kamar {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu-tipe-kamar a {
+    background-color: #d9d9d9;
+    padding: 5px 7px;
+    border-radius: 8px;
+}
+
+.list-kamar {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.kamar-produk {
+    position: relative;
+    display: flex;
+    gap: 15px;
+    /*align-items: center;
+    */
+    align-items: stretch;
+    flex-direction: row;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.kamar-produk-img {
+    flex: 0 0 40%;
+    background-image: url("../assets/img/product-1.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.kamar-produk-deskripsi {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* .kamar-produk-img {
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/img/product-1.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    -ms-border-radius: 8px 0 0 8px;
+    -o-border-radius: 8px 0 0 8px;
+} */
+
+/* .kamar-produk-deskripsi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+} */
+
+/* cadangan */
+/* @media (max-width: 768px) {
+    .kamar-produk {
+        flex-direction: column; 
+        align-items: initial; 
+        height: auto;
+    }
+
+    .kamar-produk-img {
+        flex: none;
+        width: 100%;
+        height: 200px; 
+        
+        border-radius: 8px 8px 0 0;
+    }
+} */
+
+.kamar-produk-deskripsi h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.kamar-produk-deskripsi p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.kamar-produk-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kapasitas-tamu,
+.jumlah-kasur {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kamar-produk-deskripsi h3 {
+    font-family: "Poppins", sans-serif;
+    color: var(--accent-color);
+    font-size: 16px;
+}
+
+.kamar-produk-deskripsi a {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+.footer {
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.footer-container {
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-header img {
+    width: 75px;
+    height: 70px;
+}
+
+.footer-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-header-text h1 {
+    text-transform: uppercase;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.footer-header-text h2 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.footer-contact,
+.footer-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 20px;
+}
