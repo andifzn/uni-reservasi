@@ -212,7 +212,7 @@ main {
 
 .kamar-produk-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 20px 10px;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
@@ -233,13 +233,11 @@ main {
 }
 
 .kamar-produk-img img {
+    object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     width: 100%;
     height: 138px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
 }
 
 .kamar-produk-detail {
