@@ -48,12 +48,12 @@ header {
     font-family: "Playfair Display", sans-serif;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 15px 15px 35px;
     gap: 35px 0;
     background-color: var(--primary-color);
     height: 100dvh;
     top: 50px;
-    width: 200px;
+    width: 250px;
     right: 0;
     transform: translateX(110%);
     transition: all 0.5s ease-in-out;
@@ -267,7 +267,7 @@ main {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer-header {
@@ -299,12 +299,13 @@ main {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.1px;
+    line-height: 20px;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer-content p {

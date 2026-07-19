@@ -71,10 +71,11 @@ document.addEventListener("click", (e) => {
 });
 
 const swiper = new Swiper(".kamar-produk-container", {
-    slidesPerView: 1.2 /* Menampilkan 1 kartu penuh + sedikit potongan kartu berikutnya (seperti pada gambar mockup Anda) */,
+    slidesPerView: 1.1 /* Menampilkan 1 kartu penuh + sedikit potongan kartu berikutnya (seperti pada gambar mockup Anda) */,
     spaceBetween: 16 /* Jarak antar kartu produk (dalam piksel) */,
     grabCursor: true /* Mengubah kursor mouse menjadi icon tangan siap geser */,
-
+    centeredSlides: true,
+    initialSlide: 1,
     /* Pengaturan Responsif Layar */
     breakpoints: {
         // Layar HP berukuran sedang ke atas (contoh: mulai lebar 480px)

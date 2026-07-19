@@ -48,12 +48,12 @@ header {
     font-family: "Playfair Display", sans-serif;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 15px 15px 35px;
     gap: 35px 0;
     background-color: var(--primary-color);
     height: 100dvh;
     top: 50px;
-    width: 200px;
+    width: 250px;
     right: 0;
     transform: translateX(110%);
     transition: all 0.5s ease-in-out;
@@ -83,7 +83,7 @@ main {
     position: relative;
     width: 100%;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url("figma/img/hero-image.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -125,7 +125,11 @@ main {
 .hero-header h3 {
     color: var(--accent-color);
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.hero-header span {
+    font-family: 'Inter';
 }
 
 .hero-text {
@@ -180,6 +184,7 @@ main {
 
 .kamar-header {
     position: relative;
+    text-align: center;
     width: 100%;
     color: var(--text-color);
     display: flex;
@@ -212,9 +217,11 @@ main {
 .kamar-produk-container {
     position: relative;
     width: 90%;
+    max-width: 400px;
     height: auto;
     padding: 20px 10px;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden !important;
 }
 
 .kamar-produk {
@@ -330,7 +337,7 @@ main {
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer-header {
@@ -362,12 +369,13 @@ main {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.1px;
+    line-height: 20px;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer-content p {
