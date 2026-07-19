@@ -9,6 +9,9 @@
             @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
         </style>
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <title>Uni Reservasi | Kamar Page</title>
     </head>
     <body>
@@ -28,7 +31,7 @@
                 </div>
 
                 <div class="hamburger-menu" id="hamburger-menu">
-                    <img src="../assets/icons/hamburger-icon.png" alt="" />
+                    <img src="../assets/icons/hamburger-icon.svg" alt="" />
                 </div>
             </div>
         </header>
@@ -164,11 +167,10 @@
                             </div>
                         </div>
                     </div> -->
-
                 </div>
             </section>
             <!-- Footer Section -->
-            <footer class="footer">
+            <footer class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
                 <div class="footer-container">
                     <div class="footer-header">
                         <img src="../assets/img/logo.png" alt="" />
@@ -179,27 +181,27 @@
                     </div>
                     <div class="footer-content">
                         <div class="footer-contact">
-                            <img src="../assets/icons/phone-icon.png" alt="" />
+                            <img src="../assets/icons/phone-icon.svg" alt="" />
                             <p>0813-1234-5687</p>
                         </div>
                         <div class="footer-location">
                             <img
-                                src="../assets/icons/location-icon.png"
+                                src="../assets/icons/location-icon.svg"
                                 alt=""
                             />
                             <p>Balikpapan, Kalimantan Timur</p>
                         </div>
                         <div class="footer-social-media">
                             <img
-                                src="../assets/icons/facebook-icon.png"
+                                src="../assets/icons/facebook-icon.svg"
                                 alt=""
                             />
                             <img
-                                src="../assets/icons/instagram-icon.png"
+                                src="../assets/icons/instagram-icon.svg"
                                 alt=""
                             />
                             <img
-                                src="../assets/icons/whatsapp-icon.png"
+                                src="../assets/icons/whatsapp-icon.svg"
                                 alt=""
                             />
                         </div>
@@ -209,6 +211,7 @@
         </main>
 
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

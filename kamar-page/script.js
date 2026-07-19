@@ -23,7 +23,7 @@ function tampilkanRooms(rooms) {
 
     rooms.forEach(room => {
         listKamar.innerHTML += `
-            <div class="kamar-produk">
+            <div class="kamar-produk" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
 
                 <div class="kamar-produk-img">
                     <img src="../assets/img/${room.image}" alt="${room.name}">
@@ -38,12 +38,12 @@ function tampilkanRooms(rooms) {
                     <div class="kamar-produk-detail">
 
                         <div class="kapasitas-tamu">
-                            <img src="../assets/icons/guest.png">
+                            <img src="../assets/icons/guest.svg">
                             <p>${room.guest} Tamu</p>
                         </div>
 
                         <div class="jumlah-kasur">
-                            <img src="../assets/icons/bed-icon.png">
+                            <img src="../assets/icons/bed-icon.svg">
                             <p>${room.bed}</p>
                         </div>
 
@@ -67,6 +67,10 @@ function tampilkanRooms(rooms) {
 }
 
 getRooms();
+
+AOS.init( {
+    once : true
+}) ; //initialization aos
 
 const navbarMenu = document.querySelector(".navbar-menu");
 const hamburgerMenu = document.getElementById("hamburger-menu");

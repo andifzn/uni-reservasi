@@ -11,6 +11,9 @@
             href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
         />
 
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <!-- font -->
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -35,7 +38,7 @@
                 </div>
 
                 <div class="hamburger-menu" id="hamburger-menu">
-                    <img src="assets/icons/hamburger-icon.png" alt="" />
+                    <img src="assets/icons/hamburger-icon.svg" alt="" />
                 </div>
             </div>
         </header>
@@ -57,7 +60,7 @@
                         <div class="hero-button">
                             <a href="">Lihat Kamar</a>
                             <img
-                                src="figma/icons/arrow-right.svg"
+                                src="assets/icons/arrow-right-icon.svg"
                                 alt="Arrow Right"
                             />
                         </div>
@@ -68,15 +71,15 @@
             <!-- kamar section -->
             <section class="kamar">
                 <div class="kamar-main">
-                    <div class="kamar-header">
+                    <div class="kamar-header" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
                         <h1>Kamar Kami</h1>
                         <p>Pilih kamar terbaik sesuai kebutuhan Anda</p>
                     </div>
-                    <div class="kamar-produk-container swiper">
+                    <div class="kamar-produk-container swiper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
                         <!-- Tambahkan kelas swiper-wrapper di sini -->
-                        <div class="kamar-wrapper swiper-wrapper">
+                        <div class="kamar-wrapper swiper-wrapper" >
                             <!-- KARTU 1 (Gunakan swiper-slide) -->
-                            <div class="kamar-produk swiper-slide">
+                            <div class="kamar-produk swiper-slide" >
                                 <div class="kamar-produk-img">
                                     <img src="figma/img/product.jpg" alt="" />
                                 </div>
@@ -84,14 +87,14 @@
                                     <h2>Deluxe Room</h2>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/guest.png"
+                                            src="assets/icons/guest.svg"
                                             alt=""
                                         />
                                         <p>2 Tamu</p>
                                     </div>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/bed-icon.png"
+                                            src="assets/icons/bed-icon.svg"
                                             alt=""
                                         />
                                         <p>1 Bed</p>
@@ -110,14 +113,14 @@
                                     <h2>Deluxe Room</h2>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/guest.png"
+                                            src="assets/icons/guest.svg"
                                             alt=""
                                         />
                                         <p>2 Tamu</p>
                                     </div>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/bed-icon.png"
+                                            src="assets/icons/bed-icon.svg"
                                             alt=""
                                         />
                                         <p>1 Bed</p>
@@ -136,14 +139,14 @@
                                     <h2>Deluxe Room</h2>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/guest.png"
+                                            src="assets/icons/guest.svg"
                                             alt=""
                                         />
                                         <p>2 Tamu</p>
                                     </div>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/bed-icon.png"
+                                            src="assets/icons/bed-icon.svg"
                                             alt=""
                                         />
                                         <p>1 Bed</p>
@@ -162,14 +165,14 @@
                                     <h2>Deluxe Room</h2>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/guest.png"
+                                            src="assets/icons/guest.svg"
                                             alt=""
                                         />
                                         <p>2 Tamu</p>
                                     </div>
                                     <div class="kamar-produk-detail-icon">
                                         <img
-                                            src="assets/icons/bed-icon.png"
+                                            src="assets/icons/bed-icon.svg"
                                             alt=""
                                         />
                                         <p>1 Bed</p>
@@ -180,17 +183,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="kamar-main-button">
+                    <div class="kamar-main-button" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
                         <a href="kamar-page/index.html">Lihat Semua Kamar</a>
                     </div>
                 </div>
             </section>
 
             <!-- Footer Section -->
-            <footer class="footer">
+            <footer class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
                 <div class="footer-container">
                     <div class="footer-header">
-                        <img src="assets/img/logo.png" alt="">
+                        <img src="assets/img/logo.png" alt="" />
                         <div class="footer-header-text">
                             <h1>Uni Reservasi</h1>
                             <h2>Apartemen & Hotel Balikpapan</h2>
@@ -198,17 +201,17 @@
                     </div>
                     <div class="footer-content">
                         <div class="footer-contact">
-                            <img src="assets/icons/phone-icon.png" alt="">
+                            <img src="assets/icons/phone-icon.svg" alt="" />
                             <p>0813-1234-5687</p>
                         </div>
                         <div class="footer-location">
-                            <img src="assets/icons/location-icon.png" alt="">
+                            <img src="assets/icons/location-icon.svg" alt="" />
                             <p>Balikpapan, Kalimantan Timur</p>
                         </div>
                         <div class="footer-social-media">
-                            <img src="assets/icons/facebook-icon.png" alt="">
-                            <img src="assets/icons/instagram-icon.png" alt="">
-                            <img src="assets/icons/whatsapp-icon.png" alt="">
+                            <img src="assets/icons/facebook-icon.svg" alt="" />
+                            <img src="assets/icons/instagram-icon.svg" alt="" />
+                            <img src="assets/icons/whatsapp-icon.svg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -217,6 +220,7 @@
 
         <!-- Swipper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

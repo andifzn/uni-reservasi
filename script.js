@@ -1,3 +1,8 @@
+
+AOS.init( {
+    once : true
+}) ; //initialization aos
+
 const navbarMenu = document.querySelector(".navbar-menu");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 
