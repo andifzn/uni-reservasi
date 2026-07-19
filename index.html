@@ -71,126 +71,44 @@
             <!-- kamar section -->
             <section class="kamar">
                 <div class="kamar-main">
-                    <div class="kamar-header" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
+                    <div
+                        class="kamar-header"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                        data-aos-easing="linear"
+                    >
                         <h1>Kamar Kami</h1>
                         <p>Pilih kamar terbaik sesuai kebutuhan Anda</p>
                     </div>
-                    <div class="kamar-produk-container swiper" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
+                    <div
+                        class="kamar-produk-container swiper"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                        data-aos-easing="linear"
+                    >
                         <!-- Tambahkan kelas swiper-wrapper di sini -->
-                        <div class="kamar-wrapper swiper-wrapper" >
+                        <div class="kamar-wrapper swiper-wrapper" id="list-kamar">
                             <!-- KARTU 1 (Gunakan swiper-slide) -->
-                            <div class="kamar-produk swiper-slide" >
-                                <div class="kamar-produk-img">
-                                    <img src="figma/img/product.jpg" alt="" />
-                                </div>
-                                <div class="kamar-produk-detail">
-                                    <h2>Deluxe Room</h2>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/guest.svg"
-                                            alt=""
-                                        />
-                                        <p>2 Tamu</p>
-                                    </div>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/bed-icon.svg"
-                                            alt=""
-                                        />
-                                        <p>1 Bed</p>
-                                    </div>
-                                    <h3>Rp 450.000 /malam</h3>
-                                    <a href="">Lihat Detail</a>
-                                </div>
-                            </div>
-
-                            <!-- KARTU 2 -->
-                            <div class="kamar-produk swiper-slide">
-                                <div class="kamar-produk-img">
-                                    <img src="figma/img/product.jpg" alt="" />
-                                </div>
-                                <div class="kamar-produk-detail">
-                                    <h2>Deluxe Room</h2>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/guest.svg"
-                                            alt=""
-                                        />
-                                        <p>2 Tamu</p>
-                                    </div>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/bed-icon.svg"
-                                            alt=""
-                                        />
-                                        <p>1 Bed</p>
-                                    </div>
-                                    <h3>Rp 450.000 /malam</h3>
-                                    <a href="">Lihat Detail</a>
-                                </div>
-                            </div>
-
-                            <!-- KARTU 3 -->
-                            <div class="kamar-produk swiper-slide">
-                                <div class="kamar-produk-img">
-                                    <img src="figma/img/product.jpg" alt="" />
-                                </div>
-                                <div class="kamar-produk-detail">
-                                    <h2>Deluxe Room</h2>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/guest.svg"
-                                            alt=""
-                                        />
-                                        <p>2 Tamu</p>
-                                    </div>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/bed-icon.svg"
-                                            alt=""
-                                        />
-                                        <p>1 Bed</p>
-                                    </div>
-                                    <h3>Rp 450.000 /malam</h3>
-                                    <a href="">Lihat Detail</a>
-                                </div>
-                            </div>
-
-                            <!-- KARTU 4 -->
-                            <div class="kamar-produk swiper-slide">
-                                <div class="kamar-produk-img">
-                                    <img src="figma/img/product.jpg" alt="" />
-                                </div>
-                                <div class="kamar-produk-detail">
-                                    <h2>Deluxe Room</h2>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/guest.svg"
-                                            alt=""
-                                        />
-                                        <p>2 Tamu</p>
-                                    </div>
-                                    <div class="kamar-produk-detail-icon">
-                                        <img
-                                            src="assets/icons/bed-icon.svg"
-                                            alt=""
-                                        />
-                                        <p>1 Bed</p>
-                                    </div>
-                                    <h3>Rp 450.000 /malam</h3>
-                                    <a href="">Lihat Detail</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <div class="kamar-main-button" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
+                    <div
+                        class="kamar-main-button"
+                        data-aos="fade-up"
+                        data-aos-duration="800"
+                        data-aos-easing="linear"
+                    >
                         <a href="kamar-page/index.html">Lihat Semua Kamar</a>
                     </div>
                 </div>
             </section>
 
             <!-- Footer Section -->
-            <footer class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
+            <footer
+                class="footer"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-easing="linear"
+            >
                 <div class="footer-container">
                     <div class="footer-header">
                         <img src="assets/img/logo.png" alt="" />
@@ -218,7 +136,7 @@
             </footer>
         </main>
 
-        <!-- Swipper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="script.js"></script>

@@ -4,9 +4,7 @@ const supabaseKey = "sb_publishable_Utwa-4_IPf7uGBAVA4M0uQ_5dX5fYvb";
 const client = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function getRooms() {
-    const { data, error } = await client
-        .from("rooms")
-        .select("*");
+    const { data, error } = await client.from("rooms").select("*");
 
     if (error) {
         console.error(error);
@@ -21,12 +19,12 @@ function tampilkanRooms(rooms) {
 
     listKamar.innerHTML = "";
 
-    rooms.forEach(room => {
+    rooms.forEach((room) => {
         listKamar.innerHTML += `
             <div class="kamar-produk" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
 
                 <div class="kamar-produk-img">
-                    <img src="../assets/img/${room.image}" alt="${room.name}">
+                    <img src="${room.image}" alt="${room.name}">
                 </div>
 
                 <div class="kamar-produk-deskripsi">
@@ -68,9 +66,9 @@ function tampilkanRooms(rooms) {
 
 getRooms();
 
-AOS.init( {
-    once : true
-}) ; //initialization aos
+AOS.init({
+    once: true,
+}); //initialization aos
 
 const navbarMenu = document.querySelector(".navbar-menu");
 const hamburgerMenu = document.getElementById("hamburger-menu");
