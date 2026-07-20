@@ -328,6 +328,7 @@ main {
     position: relative;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    height: auto;
 
 }
 
