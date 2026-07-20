@@ -578,11 +578,12 @@ main {
     }
 
     .kamar-produk-container {
-        max-width: 1000px;
+        max-width: 1200px;
     }
 
     .kamar-main-button {
         width: 80%;
     }
+
 
 }

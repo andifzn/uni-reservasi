@@ -172,46 +172,8 @@ main {
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 10px;
 }
-
-/* .kamar-produk-img {
-    height: 100%;
-    width: 100%;
-    background-image: url('../assets/img/product-1.png');
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px 0 0 8px;
-    -webkit-border-radius: 8px 0 0 8px;
-    -moz-border-radius: 8px 0 0 8px;
-    -ms-border-radius: 8px 0 0 8px;
-    -o-border-radius: 8px 0 0 8px;
-} */
-
-/* .kamar-produk-deskripsi {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-} */
-
-/* cadangan */
-/* @media (max-width: 768px) {
-    .kamar-produk {
-        flex-direction: column; 
-        align-items: initial; 
-        height: auto;
-    }
-
-    .kamar-produk-img {
-        flex: none;
-        width: 100%;
-        height: 200px; 
-        
-        border-radius: 8px 8px 0 0;
-    }
-} */
 
 .kamar-produk-deskripsi h2 {
     font-family: "Playfair Display", sans-serif;
@@ -326,4 +288,137 @@ main {
     gap: 20px;
 }
 
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .kamar-header h1 {
+        font-size: 40px;
+    }
 
+    .kamar-produk {
+        min-height: 120px;
+    }
+
+    .kamar-produk-deskripsi {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kamar-produk-deskripsi h2 {
+        font-size: 28px;
+    }
+
+    .kamar-produk-deskripsi p {
+        font-size: 16px;
+    }
+
+    .kamar-produk-detail {
+        justify-content: space-between;
+    }
+
+    .kamar-produk-img {
+        flex: 0 0 40%;
+    }
+}
+
+/* ukuran tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px){ 
+    .kamar-header h1 {
+        font-size: 42px;
+    }
+
+    .kamar-produk {
+        min-height: 120px;
+    }
+
+    .kamar-produk-deskripsi {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kamar-produk-deskripsi h2 {
+        font-size: 32px;
+    }
+
+
+    .kamar-produk-deskripsi p {
+        font-size: 16px;
+    }
+
+    .kamar-produk-deskripsi a {
+        width: 80%;
+        padding: 5px 5px;
+    }
+
+    .kamar-produk-detail {
+        gap: 15px;
+    }
+
+    .kamar-produk-detail h3 {
+        font-size: 20px;
+    }
+
+    .kamar-produk-img {
+        flex: 0 0 45%;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .kamar-header, .menu-tipe-kamar {
+        padding: 0 70px;
+    }
+    .kamar {
+        padding: 25px 30px 75px 30px;
+    }
+
+    .list-kamar {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 35px 110px;
+    }
+
+    .kamar-header h1 {
+        font-size: 48px;
+    }
+
+    .kamar-produk {
+        min-height: 120px;
+        width: 40%;
+    }
+
+    .kamar-produk-deskripsi {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kamar-produk-deskripsi h2 {
+        font-size: 36px;
+    }
+
+
+    .kamar-produk-deskripsi p {
+        font-size: 16px;
+    }
+
+    .kamar-produk-deskripsi a {
+        width: 80%;
+        padding: 5px 5px;
+    }
+
+    .kamar-produk-detail {
+        gap: 15px;
+    }
+
+    .kamar-produk-detail h3 {
+        font-size: 20px;
+    }
+
+    .kamar-produk-img {
+        flex: 0 0 50%;
+    }
+
+    /* Footer Section */
+}

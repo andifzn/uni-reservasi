@@ -29,7 +29,6 @@ function tampilkanRooms(rooms) {
                 </div>
                 <div class="kamar-produk-detail">
                     <h2>${room.name}</h2>
-                    
                     <div class="kamar-produk-detail-icon">
                         <img src="../assets/icons/guest-icon.png">
                         <p>${room.guest} Tamu</p>
@@ -99,8 +98,9 @@ function initSwiper() {
                 spaceBetween: 24,
             },
             1024: {
-                slidesPerView: 3.2,
+                slidesPerView: 3.7,
                 spaceBetween: 30,
+                centeredSlides: false,
             },
         },
     });
