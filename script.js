@@ -83,8 +83,17 @@ const swiper = new Swiper(".kamar-produk-container", {
             slidesPerView: 1.5,
             spaceBetween: 16,
         },
+        575: {
+            slidesPerView: 2.2,
+        },
+        580: {
+            slidesPerView: 2.4,
+        },
+        620: {
+            slidesPerView: 2.2,
+        },
         // Layar Tablet/Laptop (mulai lebar 768px)
-        768: {
+        768: {  
             slidesPerView: 3,
             spaceBetween: 24,
         },

@@ -395,9 +395,80 @@ main {
     gap: 20px;
 }
 
-@media only screen and (min-width: 361px) and (max-width: 480px) {
-    /* .kamar-produk-container {
+@media only screen and (min-width: 480px) and (max-width: 576px) {
+    .hero-header {
         width: 70%;
-    } */
+    }
+
+    .hero-text {
+        width: 80%;
+    }
 }
 
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+
+    .hero-header {
+        width: 70%;
+    }
+
+    .hero-header h1 {
+        font-size: 20px;
+    }
+
+    .hero-header h2 {
+        font-size: 40px;
+    }
+
+    .hero-header h3 {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        width: 75%;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .kamar-produk-container {
+        width: 100%;
+        max-width: 600px;
+        padding: 0px;
+    }
+
+    /* Kamar Section */
+    .kamar-header h1 {
+        font-size: 36px;
+    }
+
+    .kamar-header p {
+        font-size: 16px;
+    }
+}
+
+/* ukuran tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position:static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 15px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    .navbar-menu.pop-up {
+        display: none;
+    }
+}
