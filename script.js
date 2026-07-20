@@ -79,7 +79,6 @@ function initSwiper() {
         grabCursor: true,
         centeredSlides: true,
         initialSlide: 1,
-        loop: true,
 
         breakpoints: {
             450: {
@@ -100,8 +99,8 @@ function initSwiper() {
                 spaceBetween: 24,
             },
             1024: {
-                slidesPerView: 3.3,
-                spaceBetween: 50,
+                slidesPerView: 3.2,
+                spaceBetween: 30,
             },
         },
     });
