@@ -1,6 +1,6 @@
 :root {
     --primary-color: #2e0500;
-    --accent-color: #bf914e;
+    --accent-color: #c29a58;
     --secondary-color: #f9f6f2;
     --text-color: #222222;
 }
@@ -45,7 +45,7 @@ header {
 
 .navbar-menu {
     position: absolute;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     display: flex;
     flex-direction: column;
     padding: 15px 15px 15px 35px;
@@ -60,12 +60,32 @@ header {
 }
 
 .navbar-menu a {
+    position: relative;
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1.5px;
     text-decoration: none;
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.navbar-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu a:hover {
+    color: var(--accent-color);
 }
 
 .navbar-menu.pop-up {
@@ -97,39 +117,43 @@ main {
 .hero-main {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .hero-header {
-    font-family: "Playfair Display", sans-serif;
+    position: relative;
+    font-family: "Cormorant Garamond", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1.3px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+}
+
+.hero-header::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 80px;
+    bottom: -7%;
+    background-color: var(--accent-color);
 }
 
 .hero-header h1 {
-    font-family: "Poppins";
+    font-family: "Cormorant Garamond", sans-serif;
     color: var(--accent-color);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .hero-header h2 {
     color: var(--secondary-color);
     font-size: 36px;
-    letter-spacing: 1.9px;
 }
 
 .hero-header h3 {
     color: var(--accent-color);
     font-size: 24px;
     font-weight: 700;
-}
-
-.hero-header span {
-    font-family: 'Inter';
 }
 
 .hero-text {
@@ -194,7 +218,7 @@ main {
 }
 
 .kamar-header h1 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     text-transform: uppercase;
     font-size: 32px;
     font-weight: 600;
@@ -253,7 +277,7 @@ main {
 }
 
 .kamar-produk-detail h2 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     color: var(--text-color);
     font-size: 24px;
     font-weight: 600;
@@ -305,7 +329,7 @@ main {
 
 .kamar-main-button a {
     display: block;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--accent-color);
     text-decoration: none;
     font-size: 16px;
@@ -320,7 +344,6 @@ main {
 
 .kamar-main-button:hover a {
     color: var(--secondary-color);
-
 }
 
 /* Footer Section */
@@ -329,7 +352,6 @@ main {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     height: auto;
-
 }
 
 .footer-container {
@@ -360,7 +382,7 @@ main {
 
 .footer-header-text h1 {
     text-transform: uppercase;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: "Playfair Display", sans-serif;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -380,11 +402,12 @@ main {
 }
 
 .footer-content p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
 
-.footer-contact, .footer-location {
+.footer-contact,
+.footer-location {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -406,7 +429,6 @@ main {
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-
     .hero-header {
         width: 70%;
     }
@@ -431,12 +453,6 @@ main {
         font-size: 16px;
     }
 
-    .kamar-produk-container {
-        width: 100%;
-        max-width: 600px;
-        padding: 0px;
-    }
-
     /* Kamar Section */
     .kamar-header h1 {
         font-size: 36px;
@@ -444,6 +460,12 @@ main {
 
     .kamar-header p {
         font-size: 16px;
+    }
+
+    .kamar-produk-container {
+        width: 100%;
+        max-width: 600px;
+        padding: 0px;
     }
 }
 
@@ -454,7 +476,7 @@ main {
     }
 
     .navbar-menu {
-        position:static;
+        position: static;
         transform: translateX(0);
         height: auto;
         width: max-content;
@@ -471,4 +493,96 @@ main {
     .navbar-menu.pop-up {
         display: none;
     }
+
+    .hero-header {
+        width: 50%;
+    }
+
+    .hero-header h1 {
+        font-size: 20px;
+    }
+
+    .hero-header h2 {
+        font-size: 42px;
+    }
+
+    .hero-header h3 {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        width: 60%;
+    }
+
+    /* Kamar Section */
+
+    .kamar-header h1 {
+        font-size: 42px;
+    }
+
+    .kamar-produk-container {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 15px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    .navbar-menu.pop-up {
+        display: none;
+    }
+
+    /* Hero Section */
+
+    .hero-header {
+        width: 100%;
+    }
+
+    .hero-header h1 {
+        font-size: 24px;
+    }
+
+    .hero-header h2 {
+        font-size: 48px;
+    }
+
+    .hero-header h3 {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        width: 40%;
+    }
+
+    /* Kamar Section */
+
+    .kamar-header h1 {
+        font-size: 42px;
+    }
+
+    .kamar-produk-container {
+        max-width: 1000px;
+    }
+
+    .kamar-main-button {
+        width: 80%;
+    }
+
 }

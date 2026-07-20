@@ -12,6 +12,8 @@ async function getRooms() {
     }
 
     tampilkanRooms(data);
+    console.log(document.querySelectorAll(".swiper-slide").length);
+    initSwiper();
 }
 
 function tampilkanRooms(rooms) {
@@ -70,37 +72,37 @@ document.addEventListener("click", (e) => {
     }
 });
 
-const swiper = new Swiper(".kamar-produk-container", {
-    slidesPerView: 1.1 /* Menampilkan 1 kartu penuh + sedikit potongan kartu berikutnya (seperti pada gambar mockup Anda) */,
-    spaceBetween: 16 /* Jarak antar kartu produk (dalam piksel) */,
-    grabCursor: true /* Mengubah kursor mouse menjadi icon tangan siap geser */,
-    centeredSlides: true,
-    initialSlide: 1,
-    /* Pengaturan Responsif Layar */
-    breakpoints: {
-        // Layar HP berukuran sedang ke atas (contoh: mulai lebar 480px)
-        450: {
-            slidesPerView: 1.5,
-            spaceBetween: 16,
+function initSwiper() {
+    new Swiper(".kamar-produk-container", {
+        slidesPerView: 1.1,
+        spaceBetween: 16,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 1,
+        loop: true,
+
+        breakpoints: {
+            450: {
+                slidesPerView: 1.5,
+                spaceBetween: 16,
+            },
+            575: {
+                slidesPerView: 2.2,
+            },
+            580: {
+                slidesPerView: 2.4,
+            },
+            620: {
+                slidesPerView: 2.2,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1024: {
+                slidesPerView: 3.3,
+                spaceBetween: 50,
+            },
         },
-        575: {
-            slidesPerView: 2.2,
-        },
-        580: {
-            slidesPerView: 2.4,
-        },
-        620: {
-            slidesPerView: 2.2,
-        },
-        // Layar Tablet/Laptop (mulai lebar 768px)
-        768: {  
-            slidesPerView: 3,
-            spaceBetween: 24,
-        },
-        // Layar Monitor besar (mulai lebar 1024px)
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-    },
-});
+    });
+}
