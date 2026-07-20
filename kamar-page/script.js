@@ -36,12 +36,12 @@ function tampilkanRooms(rooms) {
                     <div class="kamar-produk-detail">
 
                         <div class="kapasitas-tamu">
-                            <img src="../assets/icons/guest.svg">
+                            <img src="../assets/icons/guest-icon.png">
                             <p>${room.guest} Tamu</p>
                         </div>
 
                         <div class="jumlah-kasur">
-                            <img src="../assets/icons/bed-icon.svg">
+                            <img src="../assets/icons/bed-icon.png">
                             <p>${room.bed}</p>
                         </div>
 

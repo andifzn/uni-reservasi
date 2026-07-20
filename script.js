@@ -29,11 +29,11 @@ function tampilkanRooms(rooms) {
                     <h2>${room.name}</h2>
                     
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/guest.svg">
+                        <img src="../assets/icons/guest-icon.png">
                         <p>${room.guest} Tamu</p>
                     </div>
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/bed-icon.svg">
+                        <img src="../assets/icons/bed-icon.png">
                         <p>${room.bed} Tamu</p>
                     </div>
                     <p>Status : ${room.status}</p>
@@ -79,9 +79,9 @@ const swiper = new Swiper(".kamar-produk-container", {
     /* Pengaturan Responsif Layar */
     breakpoints: {
         // Layar HP berukuran sedang ke atas (contoh: mulai lebar 480px)
-        480: {
-            slidesPerView: 2.2,
-            spaceBetween: 20,
+        450: {
+            slidesPerView: 1.5,
+            spaceBetween: 16,
         },
         // Layar Tablet/Laptop (mulai lebar 768px)
         768: {
