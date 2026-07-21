@@ -37,7 +37,9 @@ function tampilkanRooms(rooms) {
                         <img src="../assets/icons/bed-icon.png">
                         <p>${room.bed} Tamu</p>
                     </div>
-                    <p>Status : ${room.status}</p>
+                    <span class="status ${room.status.toLowerCase()}">
+                        ${room.status}
+                    </span>
                     <h3>
                             Rp ${room.price.toLocaleString("id-ID")} / malam
                     </h3>

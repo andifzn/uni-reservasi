@@ -60,12 +60,32 @@ header {
 }
 
 .navbar-menu a {
+    position: relative;
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1.5px;
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: 500;
+}
+
+.navbar-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+.navbar-menu a:hover {
+    color: var(--accent-color);
 }
 
 .navbar-menu.pop-up {
@@ -205,6 +225,38 @@ main {
     font-size: 16px;
 }
 
+.kamar-produk .status {
+    color: var(--text-color);
+    font-family: 'Poppins';
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kamar-produk .status::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    left: 0;
+    flex-shrink: 0;
+}
+
+.kamar-produk .status.ready::before{
+    background:#1E9E5A;
+}
+
+.kamar-produk .status.booked::before{
+    background:#D32F2F;
+}
+
+.kamar-produk .status.maintenance::before{
+    background:#C98A00;
+}
+
 .kamar-produk-deskripsi a {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -321,7 +373,26 @@ main {
 }
 
 /* ukuran tablet */
-@media only screen and (min-width: 769px) and (max-width: 1023px){ 
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 15px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
     .kamar-header h1 {
         font-size: 42px;
     }
@@ -339,7 +410,6 @@ main {
     .kamar-produk-deskripsi h2 {
         font-size: 32px;
     }
-
 
     .kamar-produk-deskripsi p {
         font-size: 16px;
@@ -361,11 +431,34 @@ main {
     .kamar-produk-img {
         flex: 0 0 45%;
     }
-
 }
 
 @media only screen and (min-width: 1024px) {
-    .kamar-header, .menu-tipe-kamar {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 15px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    .navbar-menu.pop-up {
+        display: none;
+    }
+
+    .kamar-header,
+    .menu-tipe-kamar {
         padding: 0 70px;
     }
     .kamar {
@@ -397,7 +490,6 @@ main {
     .kamar-produk-deskripsi h2 {
         font-size: 36px;
     }
-
 
     .kamar-produk-deskripsi p {
         font-size: 16px;

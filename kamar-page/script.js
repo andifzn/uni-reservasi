@@ -45,7 +45,9 @@ function tampilkanRooms(rooms) {
                             <p>${room.bed}</p>
                         </div>
 
-                        <p>Status : ${room.status}</p>
+                        <span class="status ${room.status.toLowerCase()}">
+                            ${room.status}
+                        </span>
 
                         <h3>
                             Rp ${room.price.toLocaleString("id-ID")} / malam

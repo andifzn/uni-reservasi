@@ -177,10 +177,7 @@ main {
     gap: 10px;
     padding: 12px 8px;
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
 .hero-button a {
@@ -188,6 +185,12 @@ main {
     color: var(--secondary-color);
     font-size: 16px;
     font-weight: 500;
+}
+
+.hero-button:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(110%);
+    cursor: pointer;
 }
 
 /* Kamar Section */
@@ -300,7 +303,40 @@ main {
     font-size: 16px;
 }
 
+.kamar-produk .status {
+    color: var(--text-color);
+    font-family: 'Poppins';
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.kamar-produk .status::before{
+    content:"";
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    left: 0;
+    flex-shrink: 0;
+}
+
+.kamar-produk .status.ready::before{
+    background:#1E9E5A;
+}
+
+.kamar-produk .status.booked::before{
+    background:#D32F2F;
+}
+
+.kamar-produk .status.maintenance::before{
+    background:#C98A00;
+}
+
 .kamar-produk-container .kamar-produk-detail a {
+    transition: all 0.3s ease-in-out;
     text-align: center;
     font-family: "Poppins", sans-serif;
     color: var(--secondary-color);
@@ -311,10 +347,19 @@ main {
     width: 100%;
     padding: 12px 8px;
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+}
+
+.kamar-produk-detail a:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(110%);
+    -webkit-transform: scale(110%);
+    -moz-transform: scale(110%);
+    -ms-transform: scale(110%);
+    -o-transform: scale(110%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .kamar-main-button {
