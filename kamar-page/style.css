@@ -227,7 +227,7 @@ main {
 
 .kamar-produk .status {
     color: var(--text-color);
-    font-family: 'Poppins';
+    font-family: "Poppins";
     position: relative;
     font-weight: 500;
     font-size: 18px;
@@ -236,25 +236,25 @@ main {
     gap: 8px;
 }
 
-.kamar-produk .status::before{
-    content:"";
-    width:8px;
-    height:8px;
-    border-radius:50%;
+.kamar-produk .status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
     left: 0;
     flex-shrink: 0;
 }
 
-.kamar-produk .status.ready::before{
-    background:#1E9E5A;
+.kamar-produk .status.ready::before {
+    background: #1e9e5a;
 }
 
-.kamar-produk .status.booked::before{
-    background:#D32F2F;
+.kamar-produk .status.booked::before {
+    background: #d32f2f;
 }
 
-.kamar-produk .status.maintenance::before{
-    background:#C98A00;
+.kamar-produk .status.maintenance::before {
+    background: #c98a00;
 }
 
 .kamar-produk-deskripsi a {
@@ -320,12 +320,12 @@ main {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .footer-content p {
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer-contact,
@@ -512,5 +512,5 @@ main {
         flex: 0 0 50%;
     }
 
-    /* Footer Section */
+
 }

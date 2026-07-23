@@ -392,11 +392,12 @@ main {
 }
 
 /* Fasilitas */
+
 .fasilitas {
     background-color: var(--secondary-color);
     position: relative;
     height: auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     padding: 45px 20px;
@@ -489,12 +490,12 @@ main {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .footer-content p {
     font-family: "Poppins", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer-contact,
