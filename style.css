@@ -5,6 +5,35 @@
     --text-color: #222222;
 }
 
+/* Text Focus In */
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -129,6 +158,9 @@ main {
     gap: 10px;
 }
 
+
+
+
 .hero-header::after {
     content: "";
     position: absolute;
@@ -136,6 +168,8 @@ main {
     width: 80px;
     bottom: -7%;
     background-color: var(--accent-color);
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .hero-header h1 {
@@ -143,17 +177,22 @@ main {
     color: var(--accent-color);
     font-size: 16px;
     font-weight: bold;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;;
 }
 
 .hero-header h2 {
     color: var(--secondary-color);
     font-size: 36px;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .hero-header h3 {
     color: var(--accent-color);
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 700;-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .hero-text {
@@ -166,6 +205,8 @@ main {
 .hero-text p {
     color: var(--secondary-color);
     letter-spacing: 1.1px;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .hero-button {
@@ -178,6 +219,8 @@ main {
     padding: 12px 8px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .hero-button a {
