@@ -30,11 +30,11 @@ function tampilkanRooms(rooms) {
                 <div class="kamar-produk-detail">
                     <h2>${room.name}</h2>
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/guest-icon.png">
+                        <img src="../assets/icons/guest-icon.png" alt="Guest Icon"> 
                         <p>${room.guest} Tamu</p>
                     </div>
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/bed-icon.png">
+                        <img src="../assets/icons/bed-icon.png" alt="Bed Icon">
                         <p>${room.bed} Tamu</p>
                     </div>
                     <span class="status ${room.status.toLowerCase()}">
