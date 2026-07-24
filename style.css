@@ -447,6 +447,7 @@ main {
 .fasilitas-main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 35px;
 }
@@ -491,7 +492,7 @@ main {
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 35px;
     width: 100%;
 }
 
@@ -505,7 +506,7 @@ main {
     align-items: center;
     gap: 20px;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
-    width: 40%;
+    width: 30%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -669,6 +670,27 @@ main {
         max-width: 600px;
         padding: 0px;
     }
+
+    /* Fasilitas Section */
+    .fasilitas-card {
+        flex: 1 1 200px;
+    }
+
+    .fasilitas .hero-header h1 {
+        font-size: 40px;
+    }
+
+    .fasilitas-header p {
+        font-size: 16px;
+    }
+
+    .fasilitas-card h2 {
+        font-size: 28px;
+    }
+
+    .fasilitas-card p {
+        font-size: 16px;
+    }
 }
 
 /* ukuran tablet */
@@ -724,6 +746,32 @@ main {
 
     .kamar-produk-container {
         max-width: 800px;
+    }
+
+    /* Fasilitas Section */
+    .fasilitas-card {
+        flex: 0 1 300px;
+        width: 70%;
+    }
+
+    .fasilitas-header {
+        width: 80%;
+    }
+
+    .fasilitas .hero-header h1 {
+        font-size: 42px;
+    }
+
+    .fasilitas-header p {
+        font-size: 16px;
+    }
+
+    .fasilitas-card h2 {
+        font-size: 32px;
+    }
+
+    .fasilitas-card p {
+        font-size: 16px;
     }
 }
 
@@ -785,6 +833,38 @@ main {
 
     .kamar-main-button {
         width: 80%;
+    }
+
+     /* Fasilitas Section */
+    .fasilitas-content {
+        width: 100%;
+    }
+     
+
+    .fasilitas-card {
+        flex: 0 1 280px;
+        width: 30%;
+        padding: 30px 35px;
+    }
+
+    .fasilitas-header {
+        width: 80%;
+    }
+
+    .fasilitas .hero-header h1 {
+        font-size: 48px;
+    }
+
+    .fasilitas-header p {
+        font-size: 16px;
+    }
+
+    .fasilitas-card h2 {
+        font-size: 28px;
+    }
+
+    .fasilitas-card p {
+        font-size: 16px;
     }
 
 
