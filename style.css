@@ -440,21 +440,29 @@ main {
     background-color: var(--secondary-color);
     position: relative;
     height: auto;
-    display: none;
-    flex-direction: column;
     width: 100%;
-    padding: 45px 20px;
-
+    padding: 45px 35px;
 }
 
 .fasilitas-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 35px;
 }
 
-.fasilitas-main h1 {
+.fasilitas-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    color: var(--text-color);
+}
+
+.fasilitas-header h1 {
     text-transform: uppercase;
     text-align: center;
     font-family: 'Cormorant Garamond', sans-serif;
@@ -463,24 +471,86 @@ main {
     width: 100%;
 }
 
-.fasilitas-main h1::before {
+
+.fasilitas-header h1::before {
     content: "";
     position: absolute;
     background-color: var(--accent-color);
     width: 80px;
     height: 2px;
     top: 54px;
-    transform: translateX(50%);
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
 }
 
-.fasilitas-main img {
-    height: 100%;
+.fasilitas-header p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.fasilitas-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
     width: 100%;
 }
+
+.fasilitas-card {
+    position: relative;
+    padding: 20px 15px;
+    text-align: center;
+    display: flex;
+    flex: 1 1 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.fasilitas-card h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond';
+    font-size: 24px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.fasilitas-card h2::after {
+    content: "";
+    display: block;
+    background-color: var(--accent-color);
+    width: 80px;
+    height: 2px;
+    margin: 15px auto  0;
+}
+
+.fasilitas-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.fasilitas-card img {
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
 /* Footer Section */
 .footer {
     position: relative;
@@ -552,6 +622,8 @@ main {
     display: flex;
     gap: 20px;
 }
+
+
 
 @media only screen and (min-width: 480px) and (max-width: 576px) {
     .hero-header {
