@@ -472,18 +472,13 @@ main {
 }
 
 
-.fasilitas-header h1::before {
+.fasilitas-header h1::after {
     content: "";
-    position: absolute;
+    display: block;
     background-color: var(--accent-color);
     width: 80px;
     height: 2px;
-    top: 54px;
-    transform: translateX(150%);
-    -webkit-transform: translateX(150%);
-    -moz-transform: translateX(150%);
-    -ms-transform: translateX(150%);
-    -o-transform: translateX(150%);
+    margin: 30px auto 0;
 }
 
 .fasilitas-header p {
@@ -505,7 +500,7 @@ main {
     padding: 20px 15px;
     text-align: center;
     display: flex;
-    flex: 1 1 100px;
+    flex: 1 1 180px;
     flex-direction: column;
     align-items: center;
     gap: 20px;
