@@ -12,7 +12,6 @@ async function getRooms() {
     }
 
     tampilkanRooms(data);
-    console.log(document.querySelectorAll(".swiper-slide").length);
     initSwiper();
 }
 
