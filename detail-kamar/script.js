@@ -44,7 +44,7 @@ function tampilkanRoom(room) {
         </div>
         <div class="about">
             <h1>${room.name}</h1>
-            <h2>${room.price} <span>/malam</span></h2>
+            <h2>Rp ${room.price} <span>/malam</span></h2>
             <div class="about-capacity">
                 <div class="guest">
                     <img src="../assets/icons/guest-icon.png" alt=""/>

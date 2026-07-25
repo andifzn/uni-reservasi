@@ -53,7 +53,7 @@ function tampilkanRooms(rooms) {
                             Rp ${room.price.toLocaleString("id-ID")} / malam
                         </h3>
 
-                        <a href="">
+                        <a <a href="../detail-kamar/index.html?id=${room.id}">Lihat Detail</a>>
                             Lihat Detail
                         </a>
 
