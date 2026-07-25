@@ -24,9 +24,11 @@ async function getRooms() {
 
 function tampilkanRoom(room) {
     const detailKamar = document.getElementById("detail-kamar");
-    console.log(room.images);
-    console.log(typeof room.images);
-    console.log(Array.isArray(room.images));
+
+    const footer = document.getElementById("contact");
+
+    footer.innerHTML = "";
+    detailKamar.innerHTML =""
 
     detailKamar.innerHTML = `
         <div class="detail-img-container swiper">
@@ -44,11 +46,11 @@ function tampilkanRoom(room) {
         </div>
         <div class="about">
             <h1>${room.name}</h1>
-            <h2>Rp ${room.price} <span>/malam</span></h2>
+            <h2>Rp ${room.price.toLocaleString("id-ID")} <span>/malam</span></h2>
             <div class="about-capacity">
                 <div class="guest">
                     <img src="../assets/icons/guest-icon.png" alt=""/>
-                    <p>${room.guest}Tamu</p>
+                    <p>${room.guest} Tamu</p>
                 </div>
                 <div class="bed">
                     <img src="../assets/icons/bed-icon.png" alt=""/>
@@ -76,14 +78,24 @@ function tampilkanRoom(room) {
                 .map(
                     (rule) => `
                     <p>${rule}</p>`,
-                ).join("")}
+                )
+                .join("")}
         </div>
         <div class="detail-button">
             <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
             <a href="">Reservasi Via Whatsapp</a>
         </div>
     `;
+    if (footer) {
+        if (room.phoneNumber) {
+            footer.style.display = "block"; // atau 'flex'
+            footer.innerHTML = `<p>${room.phoneNumber}</p>`;
+        } else {
+            footer.style.display = "none";
+        }
+    }
 }
+
 
 getRooms();
 

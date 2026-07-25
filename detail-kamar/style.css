@@ -5,6 +5,32 @@
     --text-color: #222222;
 }
 
+/* slide-in-fwd-center */
+@-webkit-keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -126,16 +152,25 @@ main {
 
 /* Kustomisasi warna titik (dots) kalau mau disesuaikan tema website */
 .swiper-pagination-bullet-active {
-    background-color: var(--secondary-color) !important; /* Warna emas/kuning tema lu */
+    background-color: var(
+        --secondary-color
+    ) !important; /* Warna emas/kuning tema lu */
 }
 
 .detail-main {
-    padding: 0 0 45px 0 ;
+    padding: 0 0 45px 0;
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.about,
+.fasilitas,
+.description {
+    -webkit-animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s        both;
+    animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s        both;
 }
 
 /* About */
@@ -150,7 +185,7 @@ main {
 }
 
 .about::after {
-    content: '';
+    content: "";
     position: absolute;
     height: 1px;
     width: 90%;
@@ -159,13 +194,13 @@ main {
 }
 
 .about h1 {
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     color: var(--text-color);
     font-size: 32px;
 }
 
 .about h2 {
-        font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--accent-color);
     font-size: 24px;
 }
@@ -174,7 +209,6 @@ main {
     font-size: 16px;
     color: rgb(82, 82, 82);
     font-weight: 550;
-
 }
 
 .about-capacity {
@@ -185,8 +219,9 @@ main {
     font-weight: 550;
 }
 
-.about-capacity .guest, .bed{
-    font-family: 'Poppis', sans-serif;
+.about-capacity .guest,
+.bed {
+    font-family: "Poppis", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,7 +234,7 @@ main {
 
 .about p {
     color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 25px;
 }
@@ -214,7 +249,7 @@ main {
 }
 
 .fasilitas::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 1px;
     width: 90%;
@@ -224,7 +259,7 @@ main {
 
 .fasilitas h3 {
     text-transform: uppercase;
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     font-size: 24px;
     color: var(--text-color);
     margin-bottom: 15px;
@@ -236,8 +271,8 @@ main {
     gap: 10px;
 }
 
-.fasilitas-list p{
-    font-family: 'Poppins', sans-serif;
+.fasilitas-list p {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
 
@@ -251,11 +286,10 @@ main {
     gap: 10px;
 }
 
-
 .description h4 {
     font-size: 24px;
     text-transform: uppercase;
-    font-family: 'Cormorant Garamond',sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     color: var(--text-color);
     font-weight: 600;
     margin-bottom: 15px;
@@ -263,7 +297,7 @@ main {
 
 .description p {
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: var(--text-color);
     height: max-content;
     gap: 10px;
@@ -294,17 +328,20 @@ main {
     width: max-content;
     padding: 8px 10px;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+.detail-button:hover {
+    cursor: pointer;
+    transform: scale(110%);
+    transition: all 0.3s linear;
 }
 
 .detail-button a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Footer Section */
@@ -378,4 +415,3 @@ main {
     display: flex;
     gap: 20px;
 }
-

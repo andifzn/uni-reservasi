@@ -16,8 +16,11 @@ async function getRooms() {
 
 function tampilkanRooms(rooms) {
     const listKamar = document.getElementById("list-kamar");
+    const footer = document.getElementById("contact");
+    let phoneNumberFound = null;
 
     listKamar.innerHTML = "";
+    footer.innerHTML = "";
 
     rooms.forEach((room) => {
         listKamar.innerHTML += `
@@ -52,8 +55,7 @@ function tampilkanRooms(rooms) {
                         <h3>
                             Rp ${room.price.toLocaleString("id-ID")} / malam
                         </h3>
-
-                        <a <a href="../detail-kamar/index.html?id=${room.id}">Lihat Detail</a>>
+                        <a href="../detail-kamar/index.html?id=${room.id}">
                             Lihat Detail
                         </a>
 
@@ -63,7 +65,17 @@ function tampilkanRooms(rooms) {
 
             </div>
         `;
+        if (room.phoneNumber && !phoneNumberFound) {
+            phoneNumberFound = room.phoneNumber;
+        }
     });
+    // 2. Render Footer Sekali Saja (Di Luar Loop forEach)
+    if (phoneNumberFound) {
+        footer.style.display = "block"; // atau 'flex'
+        footer.innerHTML = `<p>${phoneNumberFound}</p>`;
+    } else {
+        footer.style.display = "none";
+    }
 }
 
 getRooms();

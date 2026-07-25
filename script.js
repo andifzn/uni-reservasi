@@ -17,12 +17,13 @@ async function getRooms() {
 
 function tampilkanRooms(rooms) {
     const listKamar = document.getElementById("list-kamar");
+    const footer = document.getElementById("contact");
+    let phoneNumberFound = null;
 
     listKamar.innerHTML = "";
+    footer.innerHTML = "";
 
     rooms.forEach((room) => {
-        console.log(room.id);
-        console.log(room.name);
         listKamar.innerHTML += `
             <div class="kamar-produk swiper-slide"> 
                 <div class="kamar-produk-img">
@@ -48,7 +49,17 @@ function tampilkanRooms(rooms) {
                 </div>
             </div>
         `;
+        if (room.phoneNumber && !phoneNumberFound) {
+            phoneNumberFound = room.phoneNumber;
+        }
     });
+    // 2. Render Footer Sekali Saja (Di Luar Loop forEach)
+    if (phoneNumberFound) {
+        footer.style.display = "block"; // atau 'flex'
+        footer.innerHTML = `<p>${phoneNumberFound}</p>`;
+    } else {
+        footer.style.display = "none";
+    }
 }
 
 getRooms();

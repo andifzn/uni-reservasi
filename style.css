@@ -137,7 +137,7 @@ main {
     width: 100%;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("figma/img/hero-image.jpg");
+        url("assets/img/hero-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
