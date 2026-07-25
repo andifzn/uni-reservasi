@@ -21,6 +21,8 @@ function tampilkanRooms(rooms) {
     listKamar.innerHTML = "";
 
     rooms.forEach((room) => {
+        console.log(room.id);
+        console.log(room.name);
         listKamar.innerHTML += `
             <div class="kamar-produk swiper-slide"> 
                 <div class="kamar-produk-img">
@@ -34,7 +36,7 @@ function tampilkanRooms(rooms) {
                     </div>
                     <div class="kamar-produk-detail-icon">
                         <img src="../assets/icons/bed-icon.png" alt="Bed Icon">
-                        <p>${room.bed} Tamu</p>
+                        <p>${room.bed}</p>
                     </div>
                     <span class="status ${room.status.toLowerCase()}">
                         ${room.status}
@@ -42,7 +44,7 @@ function tampilkanRooms(rooms) {
                     <h3>
                             Rp ${room.price.toLocaleString("id-ID")} / malam
                     </h3>
-                    <a>Lihat Detail</a>
+                    <a href="detail-kamar/index.html?id=${room.id}">Lihat Detail</a>
                 </div>
             </div>
         `;
