@@ -74,7 +74,7 @@ header {
 
 .navbar-menu {
     position: absolute;
-    font-family: "Cormorant Garamond", sans-serif;
+    font-family: "Cinzel", sans-serif;
     display: flex;
     flex-direction: column;
     padding: 15px 15px 15px 35px;
@@ -600,15 +600,18 @@ main {
     line-height: 20px;
 }
 
+
+.footer-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.3px;
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.footer-content p {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    gap: 15px;
 }
 
 .footer-contact,
@@ -911,6 +914,39 @@ main {
         text-decoration: none;
         color: var(--secondary-color);
         
+    }
+
+    .footer-container {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 35px 80px;
+        
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .footer-contact, .footer-location {
+        gap: 10px;
+        font-size: 16px;
+    }
+    .footer-social-media {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+    }
+
+    .footer-social-media img {
+        height: 32px;
+        width: 32px;
     }
 
 }

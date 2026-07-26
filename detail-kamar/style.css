@@ -49,7 +49,7 @@ body {
 /* Header Section */
 header {
     background-color: var(--primary-color);
-    padding: 15px 18px;
+    padding: 15px 25px;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ header {
 
 .navbar-menu {
     position: absolute;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cinzel", sans-serif;
     display: flex;
     flex-direction: column;
     padding: 15px 15px 15px 35px;
@@ -92,7 +92,7 @@ header {
     letter-spacing: 1.5px;
     text-decoration: none;
     color: var(--secondary-color);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .navbar-menu a::after {
@@ -393,15 +393,18 @@ main {
     line-height: 20px;
 }
 
+
+.footer-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 1.3px;
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.footer-content p {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    gap: 15px;
 }
 
 .footer-contact,
@@ -415,3 +418,129 @@ main {
     display: flex;
     gap: 20px;
 }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {}
+
+/* ukuran tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 15px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-menu {
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        gap: 20px;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+
+    .navbar-menu.pop-up {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .reservasi-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: auto;
+        background-color: var(--accent-color);
+        padding: 8px 15px;
+        border-radius: 10px;
+        transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+    }
+
+    .reservasi-button:hover {
+        transform: scale(110%);
+        -webkit-transform: scale(110%);
+        -moz-transform: scale(110%);
+        -ms-transform: scale(110%);
+        -o-transform: scale(110%);
+        transition: all 0.2s ease-in;
+        -webkit-transition: all 0.2s ease-in;
+        -moz-transition: all 0.2s ease-in;
+        -ms-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        cursor: pointer;
+    }   
+
+    .reservasi-button a {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--secondary-color);
+        
+    }
+
+    .footer-container {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 35px 80px;
+        
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .footer-contact, .footer-location {
+        gap: 10px;
+        font-size: 16px;
+    }
+    .footer-social-media {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+    }
+
+    .footer-social-media img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+
