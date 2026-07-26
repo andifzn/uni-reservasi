@@ -31,46 +31,76 @@ function tampilkanRoom(room) {
     detailKamar.innerHTML =""
 
     detailKamar.innerHTML = `
-        <div class="detail-img-container swiper">
-            <div class="detail-img-wrapper swiper-wrapper">
-                ${room.images
-                    .map(
-                        (image) => `
-                        <div class="swiper-slide">
-                            <img src="${image}" alt="${room.name}">
-                        </div>`,
-                    )
-                    .join("")}
+    <div class="detail-content">
+        <div class="detail-content-img">
+            <div class="detail-img-container swiper swiper-main">
+                <div class="detail-img-wrapper swiper-wrapper">
+                    ${room.images
+                        .map(
+                            (image) => `
+                            <div class="swiper-slide">
+                                <img src="${image}" alt="${room.name}">
+                            </div>`,
+                        )
+                        .join("")}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper swiper-thumbs">
+                <div class="swiper-wrapper">
+                    ${room.images
+                        .map(
+                            (image) => `
+                            <div class="swiper-slide">
+                                <img src="${image}" alt="${room.name}">
+                            </div>`,
+                        )
+                        .join("")}
+                </div>
+            </div>
         </div>
         <div class="about">
             <h1>${room.name}</h1>
             <h2>Rp ${room.price.toLocaleString("id-ID")} <span>/malam</span></h2>
+            <span class="status ${room.status.toLowerCase()}">
+                        ${room.status}
+            </span>
             <div class="about-capacity">
                 <div class="guest">
                     <img src="../assets/icons/guest-icon.png" alt=""/>
                     <p>${room.guest} Tamu</p>
                 </div>
+                <p> | </p>
                 <div class="bed">
                     <img src="../assets/icons/bed-icon.png" alt=""/>
                     <p>${room.bed}</p>
                 </div>
             </div>
             <p>${room.description}</p>
+            <div class="detail-button">
+                <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
+                <a href="">Reservasi Via Whatsapp</a>
+            </div>
         </div>
-                    
+    </div>
+
+    <div class="detail-content-second">
         <div class="fasilitas">
-            <h3>fasilitas</h3>
-            ${room.fasilitas
-                .map(
-                    (item) => `
-                    <div class="fasilitas-list">
-                        <img src="../assets/icons/check-rounded-icon.svg" alt=""/>
-                        <p>${item}</p>
-                    </div>`,
-                )
-                .join("")}
+            <div class="fasilitas-header">
+                <h3>fasilitas</h3>
+            </div>
+            <div class="fasilitas-content">
+                ${room.fasilitas
+                    .map(
+                        (item) => `
+                        <div class="fasilitas-list">
+                            <img src="../assets/icons/check-rounded-icon.svg" alt=""/>
+                            <p>${item}</p>
+                        </div>`,
+                    )
+                    .join("")}
+            </div>
         </div>
         <div class="description">
             <h4>Ketentuan / Aturan</h4>
@@ -81,10 +111,8 @@ function tampilkanRoom(room) {
                 )
                 .join("")}
         </div>
-        <div class="detail-button">
-            <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
-            <a href="">Reservasi Via Whatsapp</a>
-        </div>
+    </div>
+                   
     `;
     if (footer) {
         if (room.phoneNumber) {
@@ -100,17 +128,35 @@ function tampilkanRoom(room) {
 getRooms();
 
 function initSwiper() {
-    new Swiper(".detail-img-container", {
+    // 1. Swiper Thumbnail (Gambar kecil di bawah)
+    const swiperThumbs = new Swiper('.swiper-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,       // Jumlah thumbnail yang kelihatan
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 5,
+                spaceBetween: 12
+            }
+        }
+    });
+
+    // 2. Swiper Utama (Gambar besar di atas)
+    const swiperMain = new Swiper('.swiper-main', {
         loop: true,
-        slidesPerView: 1,
-        centeredSlides: true,
         grabCursor: true,
         spaceBetween: 10,
+        
+        // Menghubungkan ke tombol panah kiri-kanan
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
+        // KUNCI: Menghubungkan slider utama dengan thumbnail!
+        thumbs: {
+            swiper: swiperThumbs,
         },
 
         autoplay: {

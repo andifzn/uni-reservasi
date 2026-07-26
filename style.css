@@ -394,6 +394,10 @@ main {
     width: 100%;
     padding: 12px 8px;
     border-radius: 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .kamar-produk-detail a:hover {
