@@ -62,7 +62,7 @@ function tampilkanRoom(room) {
                         .map(
                             (image) => `
                             <div class="swiper-slide">
-                                <img src="${image}" alt="${room.name}">
+                                <img src="${image}" alt="${room.name}" loading="lazy">
                             </div>`,
                         )
                         .join("")}
@@ -77,7 +77,7 @@ function tampilkanRoom(room) {
                         .map(
                             (image) => `
                             <div class="swiper-slide">
-                                <img src="${image}" alt="${room.name}">
+                                <img src="${image}" alt="${room.name}" loading="lazy">
                             </div>`,
                         )
                         .join("")}
@@ -92,16 +92,16 @@ function tampilkanRoom(room) {
             </span>
             <div class="about-capacity">
                 <div class="guest">
-                    <img src="../assets/icons/guest-icon.png" alt=""/>
+                    <img src="../assets/icons/guest-icon.png" alt="guest-icon" loading="lazy"/>
                     <p>${room.guest} Tamu</p>
                 </div>
                 <div class="bed">
-                    <img src="../assets/icons/bed-icon.png" alt=""/>
+                    <img src="../assets/icons/bed-icon.png" alt="bed-icon" loading="lazy"/>
                     <p>${room.bed}</p>
                 </div>
             </div>
             <div class="about-button">
-                <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
+                <img src="../assets/icons/whatsapp-icon-white.svg" alt="whatsapp-icon" loading="lazy">
                 <a href="">Reservasi Via Whatsapp</a>
             </div>
         </div>
@@ -121,7 +121,7 @@ function tampilkanRoom(room) {
                     .map(
                         (item) => `
                         <div class="fasilitas-list">
-                            <img src="../assets/icons/check-rounded-icon.svg" alt=""/>
+                            <img src="../assets/icons/check-rounded-icon.svg" alt="check-icon" loading="lazy"/>
                             <p>${item}</p>
                         </div>`,
                     )
@@ -134,14 +134,14 @@ function tampilkanRoom(room) {
                 .map(
                     (rule) => `
                     <div class="rules-content">
-                        <img src="../assets/icons/no-icon.svg">
+                        <img src="../assets/icons/no-icon.svg" alt="no icon" loading="lazy">
                         <p>${rule}</p>
                     </div>`,
                 )
                 .join("")}
             <div class="detail-button-container">
                 <div class="detail-button">
-                    <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
+                    <img src="../assets/icons/whatsapp-icon-white.svg" alt="whatsapp icon" loading="lazy">
                     <a href="">Reservasi Via Whatsapp</a>
                 </div>
             </div>

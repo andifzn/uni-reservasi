@@ -35,7 +35,7 @@ function tampilkanRooms(rooms) {
             <div class="kamar-produk" data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
 
                 <div class="kamar-produk-img">
-                    <img src="${room.image}" alt="${room.name}">
+                    <img src="${room.image}" alt="${room.name}" loading="lazy">
                 </div>
 
                 <div class="kamar-produk-deskripsi">
@@ -47,12 +47,12 @@ function tampilkanRooms(rooms) {
                     <div class="kamar-produk-detail">
 
                         <div class="kapasitas-tamu">
-                            <img src="../assets/icons/guest-icon.png" alt="Guest Icon">
+                            <img src="../assets/icons/guest-icon.png" alt="Guest Icon" loading="lazy">
                             <p>${room.guest} Tamu</p>
                         </div>
 
                         <div class="jumlah-kasur">
-                            <img src="../assets/icons/bed-icon.png" alt="Bed Icon">
+                            <img src="../assets/icons/bed-icon.png" alt="Bed Icon" loading="lazy">
                             <p>${room.bed}</p>
                         </div>
 

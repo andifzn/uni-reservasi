@@ -36,16 +36,16 @@ function tampilkanRooms(rooms) {
         listKamar.innerHTML += `
             <div class="kamar-produk swiper-slide"> 
                 <div class="kamar-produk-img">
-                    <img src="${room.image}" alt="${room.name}">
+                    <img src="${room.image}" alt="${room.name}" loading="lazy">
                 </div>
                 <div class="kamar-produk-detail">
                     <h2>${room.name}</h2>
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/guest-icon.png" alt="Guest Icon"> 
+                        <img src="../assets/icons/guest-icon.png" alt="Guest Icon" loading="lazy"> 
                         <p>${room.guest} Tamu</p>
                     </div>
                     <div class="kamar-produk-detail-icon">
-                        <img src="../assets/icons/bed-icon.png" alt="Bed Icon">
+                        <img src="../assets/icons/bed-icon.png" alt="Bed Icon" loading="lazy">
                         <p>${room.bed}</p>
                     </div>
                     <span class="status ${room.status.toLowerCase()}">
