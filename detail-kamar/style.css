@@ -145,6 +145,7 @@ main {
 .detail-img-container {
     width: 100%;
     height: 300px; /* Atur tinggi slider sesuai kebutuhan lu */
+    min-height: 470px;
     position: relative;
     overflow: hidden;
 }
