@@ -136,6 +136,10 @@ main {
     height: auto;
 }
 
+.detail-header {
+    display: none;
+}
+
 .detail-content {
     display: flex;
     flex-direction: column;
@@ -558,7 +562,6 @@ main {
     .detail-img-container {
         min-height: 300px;
     }
-    
 }
 
 /* ukuran tablet */
@@ -684,6 +687,7 @@ main {
 
     .detail-main {
         gap: 50px;
+        align-items: start;
     }
 
     .detail-content {
@@ -693,6 +697,41 @@ main {
         gap: 35px;
         width: 100%;
         align-items: stretch;
+    }
+
+    .detail-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        -webkit-animation: slide-in-blurred-left 2s
+            cubic-bezier(0.23, 1, 0.32, 1) both;
+        animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1) both;
+    }
+
+    .detail-header h1 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-weight: 600;
+    }
+
+    .detail-halaman {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        display: flex;
+        gap: 8px;
+        font-weight: 500;
+    }
+
+    .detail-halaman a {
+        text-decoration: none;
+        color: var(--accent-color);
+    }
+
+    #detail-halaman {
+        color: var(--text-color);
     }
 
     /* Kolom Kiri (Galeri Gambar) */

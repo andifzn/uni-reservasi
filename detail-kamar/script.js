@@ -23,14 +23,29 @@ async function getRooms() {
 }
 
 function tampilkanRoom(room) {
-    const detailKamar = document.getElementById("detail-kamar");
+    document.title = `${room.name} | Uni Reservasi`;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute("content", room.description);
+    }
 
+    const detailKamar = document.getElementById("detail-kamar");
     const footer = document.getElementById("contact");
 
     footer.innerHTML = "";
-    detailKamar.innerHTML =""
+    detailKamar.innerHTML = "";
 
     detailKamar.innerHTML = `
+    <div class="detail-header">
+        <h1>${room.name}</h1>
+        <div class="detail-halaman">
+            <a href="../index.html">Beranda</a>
+            <span>></span>
+            <a href="../kamar-page/index.html" id="lokasi-halaman">Kamar</a>
+            <span>></span>
+            <a id="detail-halaman">${room.name}</a>
+        </div>
+    </div>
     <div class="detail-content">
         <div class="detail-content-img">
             <div class="detail-img-container swiper swiper-main">
@@ -136,22 +151,21 @@ function tampilkanRoom(room) {
     }
 }
 
-
 getRooms();
 
 function initSwiper() {
     // 1. Swiper Thumbnail (Gambar kecil di bawah)
-    const swiperThumbs = new Swiper('.swiper-thumbs', {
+    const swiperThumbs = new Swiper(".swiper-thumbs", {
         spaceBetween: 10,
-        slidesPerView: 4,       // Jumlah thumbnail yang kelihatan
+        slidesPerView: 4, // Jumlah thumbnail yang kelihatan
         freeMode: true,
         watchSlidesProgress: true,
         breakpoints: {
             768: {
                 slidesPerView: 5,
-                spaceBetween: 12
-            }
-        }
+                spaceBetween: 12,
+            },
+        },
     });
 
     // 2. Swiper Utama (Gambar besar di atas)
