@@ -144,7 +144,7 @@ body {
 
 /* Header Section */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     padding: 15px 25px;
     position: fixed;
     top: 0;
@@ -172,7 +172,7 @@ header {
     flex-direction: column;
     padding: 15px 15px 15px 35px;
     gap: 35px 0;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     height: 100dvh;
     top: 50px;
     width: 250px;
