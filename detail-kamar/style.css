@@ -182,6 +182,12 @@ main {
     align-items: center;
 }
 
+.detail-content-second {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .about,
 .fasilitas,
 .rules {
@@ -548,27 +554,15 @@ main {
     }
 }
 
+@media only screen and (max-width: 350px) {
+    .detail-img-container {
+        min-height: 300px;
+    }
+    
+}
+
 /* ukuran tablet */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
-    .navbar {
-        display: flex;
-    }
-
-    .navbar-menu {
-        position: static;
-        transform: translateX(0);
-        height: auto;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        gap: 15px;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-
     .about h1 {
         font-size: 42px;
     }

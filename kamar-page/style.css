@@ -438,24 +438,6 @@ main {
 
 /* ukuran tablet */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
-    .navbar {
-        display: flex;
-    }
-
-    .navbar-menu {
-        position: static;
-        transform: translateX(0);
-        height: auto;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        gap: 15px;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
 
     .kamar-header h1 {
         font-size: 42px;
