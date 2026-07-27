@@ -136,6 +136,12 @@ main {
     height: auto;
 }
 
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .detail-img-container {
     width: 100%;
     height: 300px; /* Atur tinggi slider sesuai kebutuhan lu */
@@ -150,11 +156,20 @@ main {
     display: block;
 }
 
+.swiper-main .swiper-button-next,
+.swiper-main .swiper-button-prev {
+    display: none;
+}
+
 /* Kustomisasi warna titik (dots) kalau mau disesuaikan tema website */
 .swiper-pagination-bullet-active {
     background-color: var(
         --secondary-color
     ) !important; /* Warna emas/kuning tema lu */
+}
+
+.swiper.swiper-thumbs {
+    display: none;
 }
 
 .detail-main {
@@ -168,7 +183,7 @@ main {
 
 .about,
 .fasilitas,
-.description {
+.rules {
     -webkit-animation: slide-in-fwd-center 0.8s
         cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
     animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
@@ -213,6 +228,38 @@ main {
     font-weight: 550;
 }
 
+.status {
+    color: var(--text-color);
+    font-family: "Poppins";
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about .status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 0;
+    flex-shrink: 0;
+}
+
+.about .status.ready::before {
+    background: #1e9e5a;
+}
+
+.about .status.booked::before {
+    background: #d32f2f;
+}
+
+.about .status.maintenance::before {
+    background: #c98a00;
+}
+
 .about-capacity {
     color: var(--text-color);
     display: flex;
@@ -241,6 +288,38 @@ main {
     line-height: 25px;
 }
 
+.description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+}
+
+.description::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: var(--text-color);
+    bottom: 0;
+}
+
+.description h3 {
+    text-transform: uppercase;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.description p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
 .fasilitas {
     position: relative;
     padding: 20px 25px;
@@ -248,6 +327,12 @@ main {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+}
+
+.fasilitas-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .fasilitas::before {
@@ -279,16 +364,16 @@ main {
 }
 
 /*  */
-.description {
+.rules {
     position: relative;
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
 }
 
-.description h4 {
+.rules h4 {
     font-size: 24px;
     text-transform: uppercase;
     font-family: "Cormorant Garamond", sans-serif;
@@ -297,7 +382,13 @@ main {
     margin-bottom: 15px;
 }
 
-.description p {
+.rules-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rules p {
     position: relative;
     font-family: "Poppins", sans-serif;
     color: var(--text-color);
@@ -305,7 +396,7 @@ main {
     gap: 10px;
 }
 
-/* .description p::before {
+/* .rules p::before {
     content: '';
     position: absolute;
     background-color: var(--accent-color);
@@ -321,6 +412,12 @@ main {
     left: -5%;
 } */
 
+.detail-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .detail-button {
     display: flex;
     gap: 10px;
@@ -331,6 +428,10 @@ main {
     padding: 8px 10px;
     border-radius: 5px;
     transition: all 0.3s linear;
+}
+
+.about-button {
+    display: none;
 }
 
 .detail-button:hover {
@@ -421,6 +522,29 @@ main {
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
+    .about h1 {
+        font-size: 40px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .description h3 {
+        font-size: 28px;
+    }
+
+    .fasilitas h3 {
+        font-size: 28px;
+    }
+
+    .rules h4 {
+        font-size: 28px;
+    }
+
+    .footer-header-text h1 {
+        font-size: 28px;
+    }
 }
 
 /* ukuran tablet */
@@ -442,6 +566,30 @@ main {
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
+    }
+
+    .about h1 {
+        font-size: 42px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .description h3 {
+        font-size: 32px;
+    }
+
+    .fasilitas h3 {
+        font-size: 32px;
+    }
+
+    .rules h4 {
+        font-size: 32px;
+    }
+
+    .footer-header-text h1 {
+        font-size: 32px;
     }
 }
 
@@ -511,28 +659,51 @@ main {
     }
 
     /* Main */
+    .about h1 {
+        font-size: 42px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .description h3 {
+        font-size: 32px;
+    }
+
+    .fasilitas h3 {
+        font-size: 32px;
+    }
+
+    .rules h4 {
+        font-size: 32px;
+    }
+
+    .footer-header-text h1 {
+        font-size: 32px;
+    }
     /* Layout Utama Detail Content */
     .detail {
         padding: 45px 30px;
     }
 
     .detail-main {
-        gap: 35px;
+        gap: 50px;
     }
 
     .detail-content {
         position: relative;
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        gap: 35px;
         width: 100%;
         align-items: stretch;
     }
 
     /* Kolom Kiri (Galeri Gambar) */
     .detail-content-img {
-        flex: 0 0 70%;
-        width: 70%;
+        flex: 0 0 65%;
+        width: 60%;
         min-width: 0; /* Mencegah Swiper meluap (overflow) */
         display: flex;
         flex-direction: column;
@@ -551,6 +722,10 @@ main {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .swiper.swiper-thumbs {
+        display: block;
     }
 
     .swiper-thumbs {
@@ -581,29 +756,36 @@ main {
     }
 
     .swiper-main {
-        /* Mengubah warna bawaan ikon panah Swiper */
-        --swiper-navigation-color: #ffffff; /* Ubah ke warna ikon yang kamu mau */
-        --swiper-navigation-size: 18px; /* Ukuran ikon panah */
+        --swiper-navigation-color: #ffffff;
     }
 
-    /* Kustomisasi lingkaran background tombolnya */
+    /* 1. Kustomisasi Lingkaran Pembungkus Tombol */
     .swiper-main .swiper-button-next,
     .swiper-main .swiper-button-prev {
-        background-color: rgba(
-            0,
-            0,
-            0,
-            0.6
-        ); /* Background tombol gelap/transparan */
-        width: 40px;
-        height: 40px;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
+
+        /* Memastikan konten di dalam tombol terpusat sempurna */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible; /* Biar gak kepotong kalau panah kebesaran */
+    }
+
+    /* 2. Kustomisasi Ikon Panah (Pseudo-element) */
+    .swiper-main .swiper-button-next::after,
+    .swiper-main .swiper-button-prev::after {
+        font-size: 10px !important; /* Coba 20px - 24px dulu biar pas di dalam lingkaran 50px */
+        font-weight: bold;
+        line-height: 1 !important; /* KUNCI: Menghapus line-height bawaan Swiper yang membatasi ukuran */
     }
 
     /* Kolom Kanan (Informasi Kamar) */
     .about {
         flex: 1;
-        width: 30%;
+        width: 20%;
         display: flex;
         flex-direction: column;
         box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.3);
@@ -616,40 +798,47 @@ main {
         height: 30%;
     }
 
+    .about-capacity {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
     .about::after {
         display: none;
     }
 
-    .status {
-        color: var(--text-color);
-        font-family: "Poppins";
-        position: relative;
-        font-weight: 500;
-        font-size: 18px;
+    .about-button {
         display: flex;
+        gap: 10px;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
+        background-color: var(--accent-color);
+        width: max-content;
+        padding: 8px 10px;
+        border-radius: 5px;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
     }
 
-    .about .status::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        left: 0;
-        flex-shrink: 0;
+    .about-button a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
     }
 
-    .about .status.ready::before {
-        background: #1e9e5a;
+    .about-button:hover {
+        cursor: pointer;
+        transform: scale(110%);
+        transition: all 0.3s linear;
     }
 
-    .about .status.booked::before {
-        background: #d32f2f;
-    }
-
-    .about .status.maintenance::before {
-        background: #c98a00;
+    .detail-button {
+        display: none;
     }
 
     .detail-content-second {
@@ -673,13 +862,30 @@ main {
     .description {
         flex: 1;
         width: 50%;
-        position: relative;
+    }
+
+    .rules {
+        flex: 0 0 35%;
+        gap: 10px;
+        justify-content: start;
+    }
+
+    .rules-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rules-content img {
+        width: 16px;
+        height: 16px;
     }
 
     .fasilitas-content {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 15px 10px;
+        gap: 15px;
     }
 
     .fasilitas::before {
@@ -689,6 +895,16 @@ main {
         height: 100%;
         background-color: var(--text-color);
         left: 100%;
+    }
+
+    .description::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: var(--text-color);
+        left: 100%;
+        top: 0;
     }
 
     .footer-container {

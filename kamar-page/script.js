@@ -34,7 +34,7 @@ function tampilkanRooms(rooms) {
 
                     <h2>${room.name}</h2>
 
-                    <p>${room.description}</p>
+                    <p id="description">${room.description}</p>
 
                     <div class="kamar-produk-detail">
 

@@ -7,44 +7,44 @@
 
 /* slide in blured left */
 @-webkit-keyframes slide-in-blurred-left {
-  0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 @keyframes slide-in-blurred-left {
-  0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-            transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-            filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-            transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-    opacity: 1;
-  }
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
 * {
@@ -158,8 +158,9 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1)
+        both;
+    animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .kamar-header h1 {
@@ -195,8 +196,9 @@ main {
     font-size: 16px;
     width: 100%;
     flex-wrap: wrap;
-    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1)
+        both;
+    animation: slide-in-blurred-left 2s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .menu-tipe-kamar a {
@@ -256,6 +258,14 @@ main {
 .kamar-produk-deskripsi p {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
+}
+
+#description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .kamar-produk-detail {
@@ -368,7 +378,6 @@ main {
     letter-spacing: 1.1px;
     line-height: 20px;
 }
-
 
 .footer-container p {
     font-family: "Montserrat", sans-serif;
@@ -516,7 +525,7 @@ main {
         display: none;
     }
 
-    .reservasi-button{
+    .reservasi-button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -544,16 +553,14 @@ main {
         -ms-transition: all 0.2s ease-in;
         -o-transition: all 0.2s ease-in;
         cursor: pointer;
-    }   
+    }
 
     .reservasi-button a {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         text-decoration: none;
         color: var(--secondary-color);
-        
     }
-
 
     .kamar-header,
     .menu-tipe-kamar {
@@ -617,7 +624,6 @@ main {
         justify-content: space-between;
         width: 100%;
         padding: 35px 80px;
-        
     }
 
     .footer-content {
@@ -628,7 +634,8 @@ main {
         gap: 50px;
     }
 
-    .footer-contact, .footer-location {
+    .footer-contact,
+    .footer-location {
         gap: 10px;
         font-size: 16px;
     }
@@ -642,6 +649,4 @@ main {
         height: 32px;
         width: 32px;
     }
-
-
 }

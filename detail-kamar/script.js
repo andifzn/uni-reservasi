@@ -46,6 +46,7 @@ function tampilkanRoom(room) {
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="swiper swiper-thumbs">
                 <div class="swiper-wrapper">
@@ -71,14 +72,12 @@ function tampilkanRoom(room) {
                     <img src="../assets/icons/guest-icon.png" alt=""/>
                     <p>${room.guest} Tamu</p>
                 </div>
-                <p> | </p>
                 <div class="bed">
                     <img src="../assets/icons/bed-icon.png" alt=""/>
                     <p>${room.bed}</p>
                 </div>
             </div>
-            <p>${room.description}</p>
-            <div class="detail-button">
+            <div class="about-button">
                 <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
                 <a href="">Reservasi Via Whatsapp</a>
             </div>
@@ -86,6 +85,10 @@ function tampilkanRoom(room) {
     </div>
 
     <div class="detail-content-second">
+        <div class="description">
+            <h3>Deskripsi</h3>
+            <p>${room.description}</p>
+        </div>
         <div class="fasilitas">
             <div class="fasilitas-header">
                 <h3>fasilitas</h3>
@@ -102,14 +105,23 @@ function tampilkanRoom(room) {
                     .join("")}
             </div>
         </div>
-        <div class="description">
+        <div class="rules">
             <h4>Ketentuan / Aturan</h4>
             ${room.rules
                 .map(
                     (rule) => `
-                    <p>${rule}</p>`,
+                    <div class="rules-content">
+                        <img src="../assets/icons/no-icon.svg">
+                        <p>${rule}</p>
+                    </div>`,
                 )
                 .join("")}
+            <div class="detail-button-container">
+                <div class="detail-button">
+                    <img src="../assets/icons/whatsapp-icon-white.svg" alt="">
+                    <a href="">Reservasi Via Whatsapp</a>
+                </div>
+            </div>
         </div>
     </div>
                    
@@ -143,15 +155,21 @@ function initSwiper() {
     });
 
     // 2. Swiper Utama (Gambar besar di atas)
-    const swiperMain = new Swiper('.swiper-main', {
+    const swiperMain = new Swiper(".swiper-main", {
         loop: true,
         grabCursor: true,
         spaceBetween: 10,
-        
+
         // Menghubungkan ke tombol panah kiri-kanan
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
         },
 
         // KUNCI: Menghubungkan slider utama dengan thumbnail!
