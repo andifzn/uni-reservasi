@@ -102,7 +102,7 @@ function tampilkanRoom(room) {
                 </div>
             </div>
             <div class="about-button">
-                <img src="../assets/icons/whatsapp-icon-white.svg" alt="whatsapp-icon" loading="lazy">
+                <img src="../assets/icons/whatsapp-icon-white.png" alt="whatsapp-icon" loading="lazy">
                 <a href="">Reservasi Via Whatsapp</a>
             </div>
         </div>
@@ -122,7 +122,7 @@ function tampilkanRoom(room) {
                     .map(
                         (item) => `
                         <div class="fasilitas-list">
-                            <img src="../assets/icons/check-rounded-icon.svg" alt="check-icon" loading="lazy"/>
+                            <img src="../assets/icons/check-rounded-icon.png" alt="check-icon" loading="lazy"/>
                             <p translate="no">${item}</p>
                         </div>`,
                     )
@@ -135,14 +135,14 @@ function tampilkanRoom(room) {
                 .map(
                     (rule) => `
                     <div class="rules-content">
-                        <img src="../assets/icons/no-icon.svg" alt="no icon" loading="lazy">
+                        <img src="../assets/icons/no-icon.png" alt="no icon" loading="lazy">
                         <p>${rule}</p>
                     </div>`,
                 )
                 .join("")}
             <div class="detail-button-container">
                 <div class="detail-button">
-                    <img src="../assets/icons/whatsapp-icon-white.svg" alt="whatsapp icon" loading="lazy">
+                    <img src="../assets/icons/whatsapp-icon-white.png" alt="whatsapp icon" loading="lazy">
                     <a href="">Reservasi Via Whatsapp</a>
                 </div>
             </div>
