@@ -7,32 +7,48 @@
 
 /* Text Focus In */
 @-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 @keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+/* Loading animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    65%,
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-
-
+@keyframes smoothRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 * {
     padding: 0;
@@ -47,6 +63,83 @@ html {
 body {
     overflow-x: hidden;
     background-color: var(--secondary-color);
+}
+/* Loading screen */
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+}
+
+#loading-screen.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    --uib-size: 40px;
+    --uib-color: #2e0500;
+    --uib-speed: 1.5s;
+    --dot-size: calc(var(--uib-size) * 0.17);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    animation: smoothRotate calc(var(--uib-speed) * 1.8) linear infinite;
+}
+
+.dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation: rotate var(--uib-speed) ease-in-out infinite;
+}
+
+.dot::before {
+    content: "";
+    height: var(--dot-size);
+    width: var(--dot-size);
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transition: background-color 0.3s ease;
+}
+
+.dot:nth-child(2),
+.dot:nth-child(2)::before {
+    animation-delay: calc(var(--uib-speed) * -0.835 * 0.5);
+}
+
+.dot:nth-child(3),
+.dot:nth-child(3)::before {
+    animation-delay: calc(var(--uib-speed) * -0.668 * 0.5);
+}
+
+.dot:nth-child(4),
+.dot:nth-child(4)::before {
+    animation-delay: calc(var(--uib-speed) * -0.501 * 0.5);
+}
+
+.dot:nth-child(5),
+.dot:nth-child(5)::before {
+    animation-delay: calc(var(--uib-speed) * -0.334 * 0.5);
+}
+
+.dot:nth-child(6),
+.dot:nth-child(6)::before {
+    animation-delay: calc(var(--uib-speed) * -0.167 * 0.5);
 }
 
 /* Header Section */
@@ -162,9 +255,6 @@ main {
     gap: 10px;
 }
 
-
-
-
 .hero-header::after {
     content: "";
     position: absolute;
@@ -172,8 +262,9 @@ main {
     width: 80px;
     bottom: -7%;
     background-color: var(--accent-color);
-    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-header h1 {
@@ -181,22 +272,26 @@ main {
     color: var(--accent-color);
     font-size: 16px;
     font-weight: bold;
-    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-header h2 {
     color: var(--secondary-color);
     font-size: 36px;
-    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-header h3 {
     color: var(--accent-color);
     font-size: 24px;
-    font-weight: 700;-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    font-weight: 700;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-text {
@@ -209,8 +304,9 @@ main {
 .hero-text p {
     color: var(--secondary-color);
     letter-spacing: 1.1px;
-    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-button {
@@ -223,8 +319,9 @@ main {
     padding: 12px 8px;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
-    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+        both;
+    animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-button a {
@@ -352,7 +449,7 @@ main {
 
 .kamar-produk .status {
     color: var(--text-color);
-    font-family: 'Poppins';
+    font-family: "Poppins";
     position: relative;
     font-weight: 500;
     font-size: 18px;
@@ -361,25 +458,25 @@ main {
     gap: 8px;
 }
 
-.kamar-produk .status::before{
-    content:"";
-    width:8px;
-    height:8px;
-    border-radius:50%;
+.kamar-produk .status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
     left: 0;
     flex-shrink: 0;
 }
 
-.kamar-produk .status.ready::before{
-    background:#1E9E5A;
+.kamar-produk .status.ready::before {
+    background: #1e9e5a;
 }
 
-.kamar-produk .status.booked::before{
-    background:#D32F2F;
+.kamar-produk .status.booked::before {
+    background: #d32f2f;
 }
 
-.kamar-produk .status.maintenance::before{
-    background:#C98A00;
+.kamar-produk .status.maintenance::before {
+    background: #c98a00;
 }
 
 .kamar-produk-container .kamar-produk-detail a {
@@ -474,12 +571,11 @@ main {
 .fasilitas-header h1 {
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     font-size: 32px;
     position: relative;
     width: 100%;
 }
-
 
 .fasilitas-header h1::after {
     content: "";
@@ -491,7 +587,7 @@ main {
 }
 
 .fasilitas-header p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
 
@@ -525,7 +621,7 @@ main {
 .fasilitas-card h2 {
     position: relative;
     text-transform: uppercase;
-    font-family: 'Cormorant Garamond';
+    font-family: "Cormorant Garamond";
     font-size: 24px;
     font-weight: 500;
     width: 100%;
@@ -537,11 +633,11 @@ main {
     background-color: var(--accent-color);
     width: 80px;
     height: 2px;
-    margin: 15px auto  0;
+    margin: 15px auto 0;
 }
 
 .fasilitas-card p {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
 }
 
@@ -604,7 +700,6 @@ main {
     line-height: 20px;
 }
 
-
 .footer-container p {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -629,8 +724,6 @@ main {
     display: flex;
     gap: 20px;
 }
-
-
 
 @media only screen and (min-width: 480px) and (max-width: 576px) {
     .hero-header {
@@ -827,11 +920,10 @@ main {
         width: 80%;
     }
 
-     /* Fasilitas Section */
+    /* Fasilitas Section */
     .fasilitas-content {
         width: 100%;
     }
-     
 
     .fasilitas-card {
         flex: 0 1 280px;
@@ -863,7 +955,7 @@ main {
         display: none;
     }
 
-    .reservasi-button{
+    .reservasi-button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -891,14 +983,13 @@ main {
         -ms-transition: all 0.2s ease-in;
         -o-transition: all 0.2s ease-in;
         cursor: pointer;
-    }   
+    }
 
     .reservasi-button a {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         text-decoration: none;
         color: var(--secondary-color);
-        
     }
 
     .footer-container {
@@ -908,7 +999,6 @@ main {
         justify-content: space-between;
         width: 100%;
         padding: 35px 80px;
-        
     }
 
     .footer-content {
@@ -919,7 +1009,8 @@ main {
         gap: 50px;
     }
 
-    .footer-contact, .footer-location {
+    .footer-contact,
+    .footer-location {
         gap: 10px;
         font-size: 16px;
     }
@@ -933,5 +1024,4 @@ main {
         height: 32px;
         width: 32px;
     }
-
 }

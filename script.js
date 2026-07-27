@@ -1,3 +1,5 @@
+const loading = document.getElementById("loading-screen");
+
 const supabaseUrl = "https://wldmnkdjgyxpacbjlwfr.supabase.co";
 const supabaseKey = "sb_publishable_Utwa-4_IPf7uGBAVA4M0uQ_5dX5fYvb";
 
@@ -13,6 +15,13 @@ async function getRooms() {
 
     tampilkanRooms(data);
     initSwiper();
+    setTimeout(() => {
+        loading.classList.add("hide");
+
+        setTimeout(() => {
+            loading.remove();
+        }, 400);
+    }, 500);
 }
 
 function tampilkanRooms(rooms) {
