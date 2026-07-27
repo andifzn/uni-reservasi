@@ -710,25 +710,6 @@ main {
         display: flex;
     }
 
-    .navbar-menu {
-        position: static;
-        transform: translateX(0);
-        height: auto;
-        width: max-content;
-        display: flex;
-        flex-direction: row;
-        background-color: transparent;
-        gap: 15px;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
-
-    .navbar-menu.pop-up {
-        display: none;
-    }
-
     .hero-header {
         width: 50%;
     }
