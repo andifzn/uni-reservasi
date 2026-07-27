@@ -31,6 +31,7 @@ async function getRooms() {
 }
 
 function tampilkanRoom(room) {
+    console.log(room.fasilitas);
     document.title = `${room.name} | Uni Reservasi`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -122,7 +123,7 @@ function tampilkanRoom(room) {
                         (item) => `
                         <div class="fasilitas-list">
                             <img src="../assets/icons/check-rounded-icon.svg" alt="check-icon" loading="lazy"/>
-                            <p>${item}</p>
+                            <p translate="no">${item}</p>
                         </div>`,
                     )
                     .join("")}

@@ -261,7 +261,7 @@ main {
 }
 
 .kamar-header h1 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     font-size: 36px;
     text-transform: uppercase;
     color: var(--text-color);
@@ -328,7 +328,7 @@ main {
 }
 
 .kamar-produk-deskripsi h2 {
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     font-size: 20px;
     font-weight: 600;
 }
@@ -444,7 +444,7 @@ main {
 
 .footer-header-text h1 {
     text-transform: uppercase;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Cormoarant", sans-serif;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1.2px;
