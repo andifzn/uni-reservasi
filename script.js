@@ -101,6 +101,8 @@ function initSwiper() {
         grabCursor: true,
         centeredSlides: true,
         initialSlide: 1,
+        preloadImages: false,
+        lazy: true,
 
         breakpoints: {
             450: {

@@ -182,6 +182,8 @@ function initSwiper() {
         loop: true,
         grabCursor: true,
         spaceBetween: 10,
+        preloadImages: false,
+        lazy: true,
 
         // Menghubungkan ke tombol panah kiri-kanan
         navigation: {
