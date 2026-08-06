@@ -1,0 +1,22 @@
+1. Setting supabase kemudian atur API di vscode
+
+2. setting akun nomor telfon jagoan hosting
+
+4. serah terima invoice dp
+
+5. beli domain di jagoan hosting
+
+6. hosting website
+
+7. ganti alamat domain di file xml, robots.txt, google console
+
+8. Bikin tutorial video untuk setting supabase
+
+9. setting aku gmail untuk diserahkan ke client
+
+10. bikin tutorial untuk client mengganti password github, password vercel app, dan password supabase
+
+11. jangan lupa bikin guide untuk tutorial mengganti password akun client di situs github, vercel, supabase
+
+12. serah terima invoice paid terbaru dan BSAT
+
