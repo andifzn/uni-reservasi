@@ -1,7 +1,6 @@
 const loading = document.getElementById("loading-screen");
-const supabaseUrl = "https://wldmnkdjgyxpacbjlwfr.supabase.co";
-const supabaseKey = "sb_publishable_Utwa-4_IPf7uGBAVA4M0uQ_5dX5fYvb";
-
+const supabaseUrl = "https://bpqeuadxvtluiebvybgu.supabase.co";
+const supabaseKey = "sb_publishable_wwmgUbkJM4YauF-CAyw_rg_98IJJ4K0";
 const client = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 async function getRooms() {
