@@ -19,15 +19,10 @@ async function getRooms() {
         return;
     }
 
-    tampilkanRoom(data); // sementara ambil kamar pertama
+    tampilkanRoom(data);
     initSwiper();
-    setTimeout(() => {
-        loading.classList.add("hide");
-
-        setTimeout(() => {
-            loading.remove();
-        }, 400);
-    }, 500);
+    loading.classList.add("hide");
+    setTimeout(() => loading.remove(), 300);
 }
 
 function tampilkanRoom(room) {
@@ -148,7 +143,6 @@ function tampilkanRoom(room) {
             </div>
         </div>
     </div>
-                   
     `;
     if (footer) {
         if (room.phoneNumber) {
